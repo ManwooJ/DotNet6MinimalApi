@@ -7,6 +7,6 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.MapGet("/", (Func<string>)(() => "Welcome to .NET 6 Minimal API with C# 10!"));
+app.MapGet("/", (Func<string>)(() => "Welcome to App Service X DevOps session! 2023.03.28"));
 app.MapGet("/counter", (Func<int>)(() => ++counter ));
 app.Run();
