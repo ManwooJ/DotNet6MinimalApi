@@ -7,10 +7,13 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-//app.MapGet("/", (Func<string>)(() => "Welcome to App Service X DevOps session! 2023.03.28"));
+app.MapGet("/", () => "This is a sample web app demonstrates Minimal API.");
 app.MapGet("/showwelcometext", (string userName) =>
 {
     return $"Hello {userName}, Welcome to App Service X DevOps session!";
 });
-app.MapGet("/counter", (Func<int>)(() => ++counter ));
+app.MapGet("/todollar", (int krw) =>
+{
+    return $"{krw} KRW is {krw*1300} USD.";
+});
 app.Run();
