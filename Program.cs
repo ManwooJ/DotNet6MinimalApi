@@ -8,6 +8,6 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.MapGet("/", (Func<string>)(() => "Welcome to App Service X DevOps session! 2023.03.28"));
-app.MapGet("/showwelcometext/{userName}", (string userName) => "Hello {userName}, Welcome to App Service X DevOps session! 2023.03.28");
+app.MapGet("/showwelcometext", (Func<string>)(() => "Hello {userName}, Welcome to App Service X DevOps session!"));
 app.MapGet("/counter", (Func<int>)(() => ++counter ));
 app.Run();
