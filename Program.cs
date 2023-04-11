@@ -11,7 +11,7 @@ app.MapGet("/", () => "This is a sample web app demonstrates Minimal API.");
 {
     return $"Hello {userName}, Welcome to App Service X DevOps session!";
 });*/
-app.MapGet("/todollar", (int usd) =>
+app.MapGet("/tokoreawon", (int usd) =>
 {
     return $"{usd} USD is {usd * 1300} KRW.";
 });
