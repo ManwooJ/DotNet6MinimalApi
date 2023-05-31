@@ -6,4 +6,12 @@
     <UserSecretsId>44f7bb20-0125-42a0-9cd0-800159d62b05</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="nuget.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nuget.config" />
+  </ItemGroup>
+
 </Project>
