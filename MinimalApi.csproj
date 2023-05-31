@@ -6,4 +6,8 @@
     <UserSecretsId>44f7bb20-0125-42a0-9cd0-800159d62b05</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
 </Project>
