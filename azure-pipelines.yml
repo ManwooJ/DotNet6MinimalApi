@@ -4,8 +4,7 @@ trigger:
 - master
 
 pool:
-#  vmImage: ubuntu-latest
-   vmImage: vmss-agent1
+  vmImage: ubuntu-latest
 
 variables:
   buildConfiguration: 'Release'
