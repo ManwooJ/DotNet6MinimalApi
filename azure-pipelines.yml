@@ -28,7 +28,7 @@ steps:
 #Install Az modules
 - task: AzurePowerShell@5
   inputs:
-    azureSubscription: 'MyAzureSubscription'
+    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
     ScriptType: 'InlineScript'
     Inline: |
       Install-Module -Name Az -AllowClobber -Force
