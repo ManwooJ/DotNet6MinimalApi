@@ -16,6 +16,15 @@ variables:
 
 # Build the app for .NET 6 framework
 steps:
+# TEST AzurePowerShell
+- task: AzurePowerShell@5
+  displayName: 'AzurePowerShell test'
+  inputs:
+    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
+    ScriptType: InLineScript
+    Inline: |
+      [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+
 # TEST AzureCli
 - task: AzureCLI@2
   displayName: 'AzureCLI test'
