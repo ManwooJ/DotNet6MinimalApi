@@ -26,14 +26,14 @@ steps:
 #      Get-AzSubscription
 
 #Install Az modules
-- task: AzurePowerShell@5
-  displayName: 'Install Az module using AzurePowerShell'
-  inputs:
-    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
-    ScriptType: 'InlineScript'
-    Inline: |
-      Install-Module -Name Az -AllowClobber -Force
-    azurePowerShellVersion: 'LatestVersion'
+#- task: AzurePowerShell@5
+#  displayName: 'Install Az module using AzurePowerShell'
+#  inputs:
+#    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
+#    ScriptType: 'InlineScript'
+#    Inline: |
+#      Install-Module -Name Az -AllowClobber -Force
+#    azurePowerShellVersion: 'LatestVersion'
 
 # TEST AzurePowerShell
 - task: AzurePowerShell@5
