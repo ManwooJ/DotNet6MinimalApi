@@ -20,7 +20,7 @@ steps:
 - task: AzureCLI@2
   displayName: 'AzureCLI test'
   inputs:
-    azureSubscription: 'ManwooJ'
+    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
     scriptType: 'pscore'
     scriptLocation: 'inlineScript'
     inlineScript: |
