@@ -16,6 +16,16 @@ variables:
 
 # Build the app for .NET 6 framework
 steps:
+# TEST AzureCli
+- task: AzureCLI@2
+  displayName: 'AzureCLI test'
+  inputs:
+    azureSubscription: 'mjeon'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      Get-AzSubscription
+
 - task: UseDotNet@2
   inputs:
     version: $(dotNetVersion)
