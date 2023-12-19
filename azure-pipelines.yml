@@ -23,6 +23,7 @@ steps:
     targetType: 'inline'
     script: |
       Write-Host "Current user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)"
+      Get-AzSubscription
 
 # TEST AzureCli
 - task: AzureCLI@2
