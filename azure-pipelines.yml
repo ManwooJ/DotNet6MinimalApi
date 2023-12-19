@@ -17,22 +17,21 @@ variables:
 # Build the app for .NET 6 framework
 steps:
 # TEST PowerShell
-- task: PowerShell@2
-  displayName: 'PowerShell test'
-  inputs:
-    targetType: 'inline'
-    script: |
-      Write-Host "Current user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)"
-      Get-AzSubscription
+#- task: PowerShell@2
+#  displayName: 'PowerShell test'
+#  inputs:
+#    targetType: 'inline'
+#    script: |
+#      Write-Host "Current user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)"
+#      Get-AzSubscription
 
-# TEST AzureCli
-- task: AzureCLI@2
-  displayName: 'AzureCLI test'
+# TEST AzurePowerShell
+- task: AzurePowerShell@5
+  displayName: 'AzurePowerShell test'
   inputs:
     azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
-    scriptType: 'pscore'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
+    ScriptType: InLineScript
+    InLine: |
       Get-AzSubscription
 
 - task: UseDotNet@2
