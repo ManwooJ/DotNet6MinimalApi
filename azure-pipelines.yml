@@ -25,6 +25,15 @@ steps:
 #      Write-Host "Current user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)"
 #      Get-AzSubscription
 
+#Install Az modules
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'MyAzureSubscription'
+    ScriptType: 'InlineScript'
+    Inline: |
+      Install-Module -Name Az -AllowClobber -Force
+    azurePowerShellVersion: 'LatestVersion'
+
 # TEST AzurePowerShell
 - task: AzurePowerShell@5
   displayName: 'AzurePowerShell test'
