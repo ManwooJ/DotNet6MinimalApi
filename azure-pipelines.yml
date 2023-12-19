@@ -30,8 +30,8 @@ steps:
   displayName: 'AzurePowerShell test'
   inputs:
     azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
-    ScriptType: InLineScript
-    InLine: |
+    ScriptType: InlineScript
+    Inline: |
       Get-AzSubscription
 
 - task: UseDotNet@2
