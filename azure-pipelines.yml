@@ -16,6 +16,25 @@ variables:
 
 # Build the app for .NET 6 framework
 steps:
+# TEST PowerShell
+#- task: PowerShell@2
+#  displayName: 'PowerShell test'
+#  inputs:
+#    targetType: 'inline'
+#    script: |
+#      Write-Host "Current user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)"
+#      Get-AzSubscription
+
+#Install Az modules
+#- task: AzurePowerShell@5
+#  displayName: 'Install Az module using AzurePowerShell'
+#  inputs:
+#    azureSubscription: 'mjeon (3577af52-1cb5-4fe3-882a-18705fccce4e)'
+#    ScriptType: 'InlineScript'
+#    Inline: |
+#      Install-Module -Name Az -AllowClobber -Force
+#    azurePowerShellVersion: 'LatestVersion'
+
 - task: UseDotNet@2
   inputs:
     version: $(dotNetVersion)
@@ -28,7 +47,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --framework $(dotNetFramework) --runtime $(targetRuntime) --self-contained --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) --framework $(dotNetFramework) --runtime $(targetRuntime) --self-contained --output $(Build.ArtifactStagingDirectory) --property:maxcpucount=1'
     zipAfterPublish: True
 
 # Package the file and uploads them as an artifact of the build
