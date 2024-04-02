@@ -16,8 +16,8 @@ app.MapGet("/showwelcometext", (string userName) =>
 });
 
 // Convert currency from USD to KRW
-/*app.MapGet("/tokoreawon", (int usd) =>
+app.MapGet("/tokoreawon", (int usd) =>
 {
     return $"{usd} USD is {usd * 1300} KRW.";
-});*/
+});
 app.Run();
