@@ -11,8 +11,8 @@ variables:
   dotNetFramework: 'net6.0'
   dotNetVersion: '6.0.x'
   targetRuntime: 'linux-x64'
-  azureSPNName: 'MinimalApiSC'
-  azureAppServiceName: 'mjeon-minimalapi'
+  azureSPNName: 'MinimalApiSC-new'
+  azureAppServiceName: 'mjeon-minimalapi-new'
 
 # Build the app for .NET 6 framework
 steps:
